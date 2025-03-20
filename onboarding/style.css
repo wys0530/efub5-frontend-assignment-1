@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Sunflower:wght@300;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Sunflower:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* header.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+header {
+  position: fixed;
+  color: white;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 10px;
+}
+header button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+header h1 button {
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav ul li button {
+  font-size: 1.2rem;
+}
+
+/* main */
+main {
+  width: 100%;
+  height: 100vh;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(rgba(254, 149, 224, 0.8), rgba(232, 229, 76, 0.8)),
+    center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+main h1 {
+  font-size: 3rem;
+  font-family: "IBM Plex Sans KR", serif;
+}
+
+main h2 {
+  font-size: 4.5rem;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  font-family: "IBM Plex Sans KR", serif;
+  color: rgb(0, 0, 0);
+}
+
+main h3 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  letter-spacing: 4px;
+  font-family: "IBM Plex Sans KR", serif;
+  color: rgb(156, 0, 96);
+}
+
+main img {
+  width: 400px;
+  margin-right: 2rem;
+  height: auto;
+  border-radius: 10px;
+}
+
+main .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 1300px;
+}
+
+/*about me*/
+section {
+  font-family: "IBM Plex Sans KR", serif;
+  padding: 5rem 0;
+}
+section .about-self .left {
+  width: 50%;
+  float: left;
+}
+section:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+section .title {
+  margin-bottom: 3rem;
+}
+section .title h4 {
+  font-size: 1.35rem;
+  color: rgb(156, 0, 96);
+  position: relative;
+}
+section .title h2 {
+  font-size: 3.5rem;
+}
+section .title p {
+  font-size: 1.15rem;
+}
+
+/* float 속성 해제 */
+section .about-self::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* 본문 너비 절반 지정 & 왼쪽 배치 */
+section .about-self .left {
+  width: 50%;
+  float: left;
+}
+/* 이미지 크기가 부모 영역을 넘지 않도록 부모 영역의 최대 크기로 지정 */
+section .about-self .left img {
+  max-width: 100%;
+}
+/* 본문 너비 절반 지정 & 오른쪽 배치 */
+section .about-self .right {
+  width: 50%;
+  float: left;
+  padding: 0 2rem;
+}
+/* 본문 오른쪽 h2 태그의 글자 크기와 여백 지정 */
+section .about-self .right h2 {
+  font-size: 2.65rem;
+  margin-bottom: 1rem;
+}
+/* 본문 오른쪽 h2 태그의 strong 태그 색상 강조 */
+section .about-self .right h2 strong {
+  color: rgb(156, 0, 96);
+}
+
+/* 본문 오른쪽 h3 태그 */
+section .about-self .right h3 {
+  color: rgb(108, 0, 75);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 본문 오른쪽 p 태그의 크기와 여백 지정 */
+section .about-self .right p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+section img {
+  border-radius: 10px;
+}
+
+/*contact section*/
+section.contact .contact-me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.contact .contact-me .left {
+  width: 47%;
+  float: left;
+}
+section.contact .contact-me .right {
+  float: left;
+  width: 47%;
+  margin-left: 6%;
+}
+section.contact .contact-me .card {
+  border: 1.5px solid #ccc;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+section.contact .contact-me .card .icon i {
+  font-size: 2rem;
+  margin-right: 15px;
+}
