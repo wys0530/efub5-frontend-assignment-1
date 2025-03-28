@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위 바위 보!!</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="score-box">
+      <p class="score" id="user_score">0</p>
+      <p class="vs" id="vs">:</p>
+      <p class="score" id="com_score">0</p>
+    </div>
+    <p class="result" id="result">가위바위보 대결!</p>
+    <div class="player">
+      <div class="user">
+        <p>YOU</p>
+        <div id="user-img"></div>
+      </div>
+      <div class="computer">
+        <p>COM</p>
+        <div id="com-img"></div>
+      </div>
+    </div>
+    <div class="select" id="select">
+      <button id="scissors">가위</button>
+      <button id="rock">바위</button>
+      <button id="paper">보</button>
+    </div>
+    <div>
+      <button id="reset">다시하기</button>
+    </div>
+    <script src="action.js"></script>
+  </body>
+</html>

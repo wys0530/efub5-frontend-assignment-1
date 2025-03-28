@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap");
+
+body {
+  /*
+  margin: 요소 바깥쪽, 요소 외부 여백(다른 요소와 거리 조절), 
+  padding: 요소 안쪽 공간, 내부 여백(콘텐츠와 테두리 사이 공간)
+  */
+  margin: 0; /*auto로 설정하면 부모 영역 기준 수평 방향 자동 가운데 정렬함*/
+  margin-top: 100px; /*위쪽 여백*/
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "IBM Plex Sans KR", serif;
+  font-weight: 400;
+  font-size: larger;
+}
+
+.player {
+  display: flex;
+  gap: 200px; /*요소들 (you, com)사이 간격*/
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user,
+.computer {
+  text-align: center;
+  /*블럭 요소 안의 인라인 요소(글자 등)을 정렬*/
+}
+
+.score-box {
+  display: flex; /*이걸 넣으면.. 점수가 가로로 배치 됨~!*/
+  gap: 20px; /*점수 사이 여백*/
+  font-size: 35px;
+}
+
+button {
+  padding: 15px 25px; /*버튼 상자랑 글씨 사이 여백 지정 */
+  margin: 15px; /*각 버튼 사이의 여백 지정!*/
+  border-radius: 8px;
+  border: 0; /*버튼 테두리*/
+  background-color: rgb(32, 43, 98); /*배경(버튼)색, 아래는 글자 색 */
+  color: white;
+  font-weight: 700;
+  margin-bottom: 80px;
+  /*다시하기 버튼을 가위바위보 버튼과 떨어트리기 위해서 아래 여백만 더 지정함*/
+}
+
+/*가위바위보 이미지 넣기*/
+
+/* #은 id 선택자임! id가 해당되는 요소를 선택해서 스타일을 적용*/
+#user-img {
+  width: 200px;
+  height: 300px;
+}
+
+#com-img {
+  width: 200px;
+  height: 300px;
+}
+
+.selected-rock {
+  /*배경 이미지를 센터에, 한 번만 표시하고 반복x */
+  background: url("img/rock.svg") center no-repeat;
+  background-size: 200px 200px;
+}
+
+.selected-scissors {
+  background: url("img/scissors.svg") center no-repeat;
+  background-size: 200px 200px;
+}
+
+.selected-paper {
+  background: url("img/paper.svg") center no-repeat;
+  background-size: 200px 200px;
+}
