@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TodoTemplateBlock = styled.div`
-  width: 512px;
+  width: 530px;
   height: 768px;
 
   position: relative;
@@ -15,6 +15,7 @@ const TodoTemplateBlock = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 `;
 
 function TodoTemplate({ children }) {

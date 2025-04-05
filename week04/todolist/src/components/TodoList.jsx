@@ -5,14 +5,55 @@ import TodoItem from "./TodoItem";
 const TodoListBlock = styled.div`
   flex: 1;
   padding: 20px 32px;
-  padding-bottom: 48px;
+  padding-bottom: 20px;
   overflow-y: auto;
 `;
 
-function TodoList({ todos, setTodos }) {
+const TodoListFilter = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 3px 0px 20px;
+  font-size: 13px;
+
+  button {
+    background: rgb(234, 243, 255);
+    color: rgb(63, 72, 84);
+    padding: 7px;
+  }
+
+  button.active {
+    background: rgb(120, 188, 255);
+    color: rgb(63, 63, 63);
+    font-weight: bold;
+  }
+`;
+
+function TodoList({ todos, setTodos, todofilter, setFilter }) {
   //투두 리스트 표시하기
   return (
     <TodoListBlock>
+      <TodoListFilter>
+        <button
+          className={todofilter === "all" ? "active" : ""}
+          onClick={() => setFilter("all")}
+        >
+          전체보기
+        </button>
+        <button
+          className={todofilter === "undone" ? "active" : ""}
+          onClick={() => setFilter("undone")}
+        >
+          미완료
+        </button>
+        <button
+          className={todofilter === "done" ? "active" : ""}
+          onClick={() => setFilter("done")}
+        >
+          완료
+        </button>
+      </TodoListFilter>
+
       {todos.map(
         (
           todo //todoItem에 todo의 정보를 전달

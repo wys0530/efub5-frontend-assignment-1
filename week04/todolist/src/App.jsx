@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
 const LOCAL_STORAGE_KEY = "todos";
 
 function App() {
+  const [todofilter, setFilter] = useState("all"); // all, done , undone 상태 중 전체 보기를 초기값으로 설정
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem(LOCAL_STORAGE_KEY);
     //getItem(key)는 키에 해당하는 값을 받아옴. 저장된 값 로딩! (1번과정)
@@ -38,13 +39,24 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos)); //JSON.stringify: 자바스크립트의 데이터를 문자열로 바꿈
   }, [todos]); //의존성 배열 todos의 내용물이 바뀔때마다 setItem 호출: todo(key), 값(todos의 값을 문자열로 바꾼 결과)
 
+  const getFilteredTodos = () => {
+    if (todofilter === "done") return todos.filter((todo) => todo.done);
+    if (todofilter === "undone") return todos.filter((todo) => !todo.done);
+    return todos;
+  };
+
   return (
     <>
       <GlobalStyle />
 
       <TodoTemplate>
         <TodoHead todos={todos} setTodos={setTodos} />
-        <TodoList todos={todos} setTodos={setTodos} />
+        <TodoList
+          todos={getFilteredTodos()}
+          setTodos={setTodos}
+          todofilter={todofilter}
+          setFilter={setFilter}
+        />
         <TodoCreate todos={todos} setTodos={setTodos} />
       </TodoTemplate>
     </>
