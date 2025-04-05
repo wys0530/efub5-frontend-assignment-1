@@ -6,7 +6,6 @@ const InsertFormPositioner = styled.div`
   width: 100%;
   bottom: 0;
   left: 0;
-  /*position: absolute;*/
 `;
 
 const InsertForm = styled.form`
