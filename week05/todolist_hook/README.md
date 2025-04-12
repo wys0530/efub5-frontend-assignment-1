@@ -1,12 +1,12 @@
 ## 성능 개선 전
 
 ![alt text](image.png)
-![alt text](image-2.png)
+![alt text](<ezgif.com-video-to-gif-converter (1).gif>)
 
 ## 성능 개선 후
 
 ![alt text](image-1.png)
-![alt text](image-3.png)
+![alt text](ezgif.com-video-to-gif-converter.gif)
 
 ## useMemo
 
