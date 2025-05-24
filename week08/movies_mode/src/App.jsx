@@ -27,7 +27,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  background: "#1e1e1e",
+  background: "#000000",
   color: "#ffffff",
   cardBackground: "#ffffff",
   titleColor: "#111",
