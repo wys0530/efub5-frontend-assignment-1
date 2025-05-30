@@ -23,7 +23,7 @@ const PostBox = styled.div`
   flex-direction: column;
 
   width: 600px;
-  height: 500px;
+  height: auto;
   * {
     color: black;
   }
