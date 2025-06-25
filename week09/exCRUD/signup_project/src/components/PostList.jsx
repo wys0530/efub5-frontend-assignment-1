@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axiosInstance from "../libs/axiosInstance";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { HiThumbUp, HiOutlineThumbUp } from "react-icons/hi";
 
 const Container = styled.div`
   padding: 2rem;
